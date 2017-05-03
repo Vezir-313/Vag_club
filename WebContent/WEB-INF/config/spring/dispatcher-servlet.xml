@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+	 xmlns:aop="http://www.springframework.org/schema/aop"
+	 xmlns:util="http://www.springframework.org/schema/util"
+	 
+ 	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+         http://www.springframework.org/schema/aop 
+         http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+   <context:component-scan base-package="net.myapp.test.spring.controller" />
+
+<mvc:resources mapping="/resources/**" location="/resources/" />
+<mvc:annotation-driven />
+
+
+
+<mvc:resources mapping="/project/**" location="/project/" />
+	
+
+	<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
+   <bean class="net.myapp.web.servlet.view.MyViewResolver">
+      <property name="prefix" value="/WEB-INF/" />
+      <property name="suffix" value=".jsp" />
+   </bean>
+ 
+ 
+ <beans:bean id="messageSource"
+        class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <beans:property name="basename" value="/WEB-INF/i18n/messages" />
+        <beans:property name="defaultEncoding" value="UTF-8" />
+    </beans:bean>
+ 
+
+ 
+ 
+
+
+
+    <beans:bean id="localeResolver"
+        class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <beans:property name="defaultLocale" value="en" />
+        <beans:property name="cookieName" value="myAppLocaleCookie"></beans:property>
+        <beans:property name="cookieMaxAge" value="3600"></beans:property>
+    </beans:bean>
+ 
+   	<mvc:interceptors>
+        <beans:bean
+            class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <beans:property name="paramName" value="lang" />
+        </beans:bean>
+   	</mvc:interceptors>
+ 
+ 
+ 
+ 
+ 
+
+ 
+     
+ 
+ 
+    <beans:bean id="hibernate4AnnotatedSessionFactory"    class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <beans:property name="dataSource" ref="dataSource" />
+        <beans:property name="annotatedClasses">
+        <beans:list>
+                       <beans:value>com.journaldev.spring.model.User</beans:value>
+                       <beans:value>com.journaldev.spring.model.Car</beans:value>
+                       <beans:value>com.journaldev.spring.model.Connection</beans:value>
+          		       <beans:value>com.journaldev.spring.model.Tool</beans:value>
+          		       <beans:value>com.journaldev.spring.model.Model</beans:value>
+          		       <beans:value>com.journaldev.spring.model.Marka</beans:value>
+          		       
+                                 
+                
+                
+               
+        </beans:list>
+        </beans:property>
+       
+    </beans:bean>
+     
+
+ 
+    <beans:bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <beans:property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <beans:property name="jdbcUrl" value="jdbc:mysql://localhost:3306/vag_club" />
+        <beans:property name="user" value="root" />
+        <beans:property name="password" value="" />
+
+        <beans:property name="checkoutTimeout" value="60000" />
+        <beans:property name="idleConnectionTestPeriod" value="30"/>
+        <beans:property name="initialPoolSize" value="10" />
+        <beans:property name="maxIdleTime" value="30" />
+        <beans:property name="maxPoolSize" value="200" />
+        <beans:property name="minPoolSize" value="10" />
+        <beans:property name="maxStatements" value="10" />
+
+</beans:bean>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<beans:bean id="AnnouncementDAO" class="com.journaldev.spring.dao.AnnouncementDAO">
+        <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+        
+        
+    </beans:bean>
+
+
+    
+    
+    <beans:bean id="FormDAO" class="com.journaldev.spring.dao.FormDAO">
+        <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+        
+        
+    </beans:bean>
+
+ <beans:bean id="ImageUtil" class="net.myapp.services.ImageUtil">
+    </beans:bean>
+    
+    
+    <beans:bean id="Blog_statusDAO" class="com.journaldev.spring.dao.Blog_statusDAOImpl">
+        <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+    </beans:bean>
+   
+   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+   
+   
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+    </beans:bean>
+ 
+ 
+ 
+     <beans:bean id="secureUserDAO" class="net.myapp.dao.SecureUserDAOImpl">
+        <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+     </beans:bean>
+
+ 
+
+</beans>

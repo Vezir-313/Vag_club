@@ -1,0 +1,177 @@
+#search {
+  padding-top: 50px;
+  width: 100%;
+  background: #F6F7F8; }
+  #search form h2 {
+    text-align: center; }
+  #search form .search-left select {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #ffb12c;
+    border: 2px solid gray;
+    margin-top: 20px; }
+  #search form .search-left .multiselect {
+    cursor: pointer;
+    width: 100%; }
+    #search form .search-left .multiselect .selectbox {
+      position: relative; }
+      #search form .search-left .multiselect .selectbox select {
+        width: 100%; }
+        @media (min-width: 768) and (max-width: 991px) {
+          #search form .search-left .multiselect .selectbox select option {
+            font-size: 8px !important; } }
+        @media (min-width: 480) and (max-width: 767px) {
+          #search form .search-left .multiselect .selectbox select option {
+            font-size: 13px !important; } }
+        @media (max-width: 479px) {
+          #search form .search-left .multiselect .selectbox select option {
+            font-size: 12px !important; } }
+      #search form .search-left .multiselect .selectbox .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0; }
+    #search form .search-left .multiselect .checkboxes {
+      box-sizing: border-box;
+      border-radius: 2px;
+      width: calc(100% - 30px);
+      background: #fff;
+      position: absolute;
+      z-index: 5;
+      display: none;
+      border: 2px solid gray; }
+      @media (max-width: 992px) {
+        #search form .search-left .multiselect .checkboxes:nth-child(6), #search form .search-left .multiselect .checkboxes:nth-child(7) {
+          width: 50%; } }
+      #search form .search-left .multiselect .checkboxes label {
+        cursor: pointer;
+        display: block;
+        background: #ffb12c;
+        margin-bottom: 2px;
+        font-size: 17px; }
+        #search form .search-left .multiselect .checkboxes label:last-child {
+          margin-bottom: 0px; }
+        #search form .search-left .multiselect .checkboxes label:hover {
+          background-color: #1e90ff; }
+        #search form .search-left .multiselect .checkboxes label input {
+          width: 30px;
+          height: 19px; }
+          @media (min-width: 768) and (max-width: 991px) {
+            #search form .search-left .multiselect .checkboxes label input {
+              width: 30px;
+              height: 19px; } }
+          @media (min-width: 480) and (max-width: 767px) {
+            #search form .search-left .multiselect .checkboxes label input {
+              width: 25px;
+              height: 17px; } }
+          @media (max-width: 479px) {
+            #search form .search-left .multiselect .checkboxes label input {
+              width: 20px;
+              height: 13px; } }
+        #search form .search-left .multiselect .checkboxes label span {
+          top: -3px;
+          position: relative;
+          vertical-align: middle;
+          font-weight: normal; }
+          @media (min-width: 768) and (max-width: 991px) {
+            #search form .search-left .multiselect .checkboxes label span {
+              font-size: 15px !important; } }
+          @media (min-width: 480) and (max-width: 767px) {
+            #search form .search-left .multiselect .checkboxes label span {
+              font-size: 13px !important;
+              top: -2px; } }
+          @media (max-width: 479px) {
+            #search form .search-left .multiselect .checkboxes label span {
+              font-size: 12px !important;
+              top: -1px; } }
+  @media (max-width: 992px) {
+    #search form .search-left .multiselect2 {
+      width: calc(50% - 15px);
+      float: left; }
+      #search form .search-left .multiselect2:nth-child(2) {
+        float: right; }
+      #search form .search-left .multiselect2 .checkboxes {
+        width: calc(50% - 30px) !important; } }
+  #search form .search-left .bankNovu {
+    clear: both; }
+    #search form .search-left .bankNovu label input {
+      width: 25px;
+      height: 17px; }
+    #search form .search-left .bankNovu label span {
+      cursor: pointer;
+      position: relative;
+      top: -3px;
+      margin-left: 10px;
+      font-size: 18px;
+      font-weight: normal; }
+  #search form .mainInput {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+    #search form .mainInput #inputs h6 {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 17px;
+      color: #525252;
+      text-align: center; }
+    #search form .mainInput #inputs .inputItem1 {
+      text-align: center;
+      margin: 0 auto; }
+      #search form .mainInput #inputs .inputItem1 h6 {
+        position: relative;
+        left: 35%;
+        float: left; }
+        @media (max-width: 767px) {
+          #search form .mainInput #inputs .inputItem1 h6 {
+            left: 25%; } }
+      #search form .mainInput #inputs .inputItem1 select {
+        font-weight: 600;
+        position: relative;
+        left: 40%;
+        padding: 0 !important;
+        margin-top: 10px;
+        height: 35px;
+        vertical-align: middle;
+        border-radius: 5px;
+        background: #ffb12c;
+        cursor: pointer;
+        width: 60px !important;
+        font-size: 14px; }
+        @media (max-width: 767px) {
+          #search form .mainInput #inputs .inputItem1 select {
+            height: 30px;
+            width: 55px !important;
+            font-size: 12px;
+            left: 30%; } }
+    #search form .mainInput #inputs span {
+      color: #525252; }
+    #search form .mainInput #inputs input {
+      border-color: #ffb12c;
+      display: inline-block;
+      width: 75px; }
+  #search form .tehcizat {
+    width: 100%; }
+    @media (max-width: 479px) {
+      #search form .tehcizat .tehcizatItem {
+        width: 80% !important;
+        margin: 0 auto !important;
+        margin-left: 20px !important;
+        margin-top: 20px !important; } }
+    @media (min-width: 479px) and (max-width: 767px) {
+      #search form .tehcizat .tehcizatItem {
+        padding-left: 30px !important;
+        margin-top: 40px !important; }
+        #search form .tehcizat .tehcizatItem:nth-child(4) {
+          margin-top: -90px !important; } }
+    #search form .tehcizat .tehcizatItem label {
+      margin-top: 5px; }
+      #search form .tehcizat .tehcizatItem label span {
+        cursor: pointer;
+        margin-left: 10px; }
+  @media (max-width: 767px) {
+    #search form .addForm .btnAdd {
+      margin: 0 auto;
+      left: 15px; } }
+
+/*# sourceMappingURL=style2.css.map */
