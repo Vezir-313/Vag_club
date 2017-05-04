@@ -1,0 +1,413 @@
+$color1 : rgb(255, 177,44);
+#elan{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 50px;
+	width: 100%;
+	background: #F6F7F8;
+
+	form{
+			h2{
+				text-align: center;
+			}
+			.elanContentItem{
+				.elanRow{
+					.elanRowLeft{
+						p{
+							line-height: 15px;
+							margin-bottom: 0;
+							margin-top: 18px;
+							font-weight: normal;
+    						color: #333;
+    						font-weight: normal;
+    						vertical-align: middle;
+    						font-size: 14px;
+    						@media (min-width:768px) and (max-width:991px){
+								font-size: 12px;
+    						}
+    						
+    						
+							span{
+								color: #c51e2b;
+							}
+						}
+					}	// .elanRowLeft
+
+					.elanRowRight{
+						select{
+							background:$color1;
+							vertical-align: middle;
+						    height: 32px;
+						    border: 1px solid #ccc;
+						    border-radius: 5px;
+						    padding: 0 10px;
+						    box-sizing: border-box;
+						    color: #333;
+						    font-size: 14px;
+						}
+						input{
+							background:$color1;
+							vertical-align: middle;
+						    height: 32px;
+						    border: 1px solid #ccc;
+						    border-radius: 5px;
+						    padding: 0 10px;
+						    box-sizing: border-box;
+						    color: #333;
+						    font-size: 14px;
+						}
+						textarea{
+								border-color: $color1;
+								border-radius:5px;
+								height: 95px;
+							    resize: vertical;
+								position: relative;
+								top: 1px;
+								vertical-align: middle;
+								font-size: 14px;
+								font-weight: normal;
+							}
+					} // .elanRowRight
+
+					.elanRowCheck{
+						top: 10px;
+
+						label{
+							top: -8px;
+							position:relative;
+							&:last-child{
+								top: -17px;
+							}
+							input{
+								vertical-align: middle;
+								border-radius:50%;
+								width: 20px;
+								height: 14px;
+							}
+							span{
+								cursor: pointer;
+								position: relative;
+								top: 1px;
+								vertical-align: middle;
+								font-size: 14px;
+								font-weight: normal;
+							}
+
+						}
+					} // .elanRowCheck
+
+					.elanRowKredit{
+						padding-top: 20px;
+						label{
+				
+							input{
+								vertical-align: middle;
+								border-radius:50%;
+								width: 30px;
+								height: 19px;
+							}
+							span{
+								cursor: pointer;
+								position: relative;
+								top: 3px;
+								vertical-align: middle;
+								font-size: 16px;
+								font-weight: normal;
+							}
+						}
+					}  // .elanRowKredit
+
+				} //.elanRow
+			} // .elanContentItem
+			
+		.tehcizat{
+			clear: both;
+			padding-top: 50px;
+			width: 100%;
+				h1{
+					font-size: 28px;
+					@media (max-width:767px){	
+						text-align: center;
+					}				
+				}
+			.tehcizatItem{
+				@media(max-width:479px){
+				   width: 80% !important;
+				   margin: 0 auto !important;
+				   margin-left: 20px !important;
+				   margin-top:20px !important;
+				   // text-align: center;
+				   
+				} 
+				@media (min-width:479px) and (max-width:767px){
+					padding-left:30px !important;
+				   margin-top:40px !important;
+				   &:nth-child(4){
+				   	margin-top:-95px !important;
+
+				   }
+				} 
+				label{
+					margin-top: 5px;
+					input{
+					}
+					span{
+						cursor: pointer;
+						margin-left: 10px;
+					}
+				} 
+			}	// tehcizatItem
+		}	// tehcizat
+
+		.shekil{
+				h1{
+					margin-bottom:15px; 
+					font-size: 28px;
+					@media (max-width:767px){	
+						margin-left: 15px;
+					}				
+				}
+				.fotoContent{
+					.addFoto{
+						margin-bottom:20px;
+						@media (max-width:767px){
+							margin-left: 15px;
+						}
+						cursor: pointer;
+						border-radius: 8px;
+					    width: 114px;
+					    height: 86px;
+					    background-color: $color1;
+					    text-align: center;
+
+					    i{
+					    	font-size: 45px;
+						    position: relative;
+						    top: 23px;
+					    }
+					} // .addFoto
+					.addedFoto{
+						display: flex;
+						flex-wrap:wrap;
+						margin-top: 20px;
+						clear: both;
+						// background:black;
+						width: 100%;
+						// height: 100px;
+						.addedFotoItem{
+							margin-left: 10px;
+							margin-top: 10px;
+							// overflow: hidden;
+							width: 111px;
+							height: 110px;
+							
+							.imgDiv{
+								overflow: hidden;
+								width: 111px;
+								height: 84px;
+								img{
+								width: 100%;
+								height: 100%;	
+									border:1px solid lightgray;
+									box-sizing:border-box;
+									width: 111px;
+	    							height: 84;
+								}
+							}
+							.fotoIcon{
+								i{
+									padding:5px;	
+									cursor: pointer;
+									&:hover{
+										background:yellow;
+									}
+									&:first-child{
+										color: red;
+										font-size:18px;
+									}
+									&:nth-child(2){
+										float: right;
+									}
+									&:nth-child(3){
+										float: right;
+									}	
+								}
+							}
+						}
+
+					}//addedFoto
+					.shekilTxt{
+						.shekilTxtItem{
+							@media (min-width:768px){
+								&:first-child{
+									margin-left: -15px;
+								}	
+							}
+							
+							
+							ul{
+								padding:0;
+								margin-top: 30px;
+								li{
+									margin-top: 15px;
+									span{
+										color: #c51e2b; 
+									}
+								}
+							}
+						}
+
+					} // .shekilTxt
+
+				} // .fotoContent	
+
+		} //.shekil
+
+
+		.video{
+				h1{
+					margin-bottom:15px; 
+					font-size: 28px;
+					@media (max-width:767px){	
+						margin-left: 15px;
+					}				
+				}
+				.videoContent{
+					.addVideo{
+						margin-bottom:20px;
+						@media (max-width:767px){
+							margin-left: 15px;
+						}
+						cursor: pointer;
+						border-radius: 8px;
+					    width: 114px;
+					    height: 86px;
+					    background-color: $color1;
+					    text-align: center;
+
+					    i{
+					    	font-size: 45px;
+						    position: relative;
+						    top: 23px;
+					    }
+					} // .addFoto
+					.addedVideo{
+						margin:0 auto;
+						width: 360px;
+						clear: both;
+						@media (max-width:380px){
+						width: 90%;	
+							// margin-left: 15px;
+						}
+						
+						.addedVideoItem{
+							position:relative;
+							display: none;
+							margin-top: 30px;
+
+							i{
+								font-size:18px;
+								color: red;
+							    cursor: pointer;
+								top: 0;
+								right: 0;
+								position: absolute;
+							}
+						}
+
+					}//addeVideo
+					
+
+				} // .videoContent	
+
+		} //.video
+
+
+		
+		.elaqe{
+			clear: both;
+			padding-top:20px;
+				h1{
+					margin-bottom:15px; 
+					font-size: 28px;
+					@media (max-width:767px){	
+						margin-left: 15px;
+					}				
+				}
+			.elaqeItem{
+					.elaqeRowLeft{
+						p{
+							line-height: 15px;
+							margin-bottom: 0;
+							margin-top: 18px;
+							font-weight: normal;
+    						color: #333;
+    						font-weight: normal;
+    						vertical-align: middle;
+    						font-size: 14px;
+    						@media (min-width:768px) and (max-width:991px){
+								font-size: 12px;
+    						}
+    						
+    						
+							span{
+								color: #c51e2b;
+							}
+						}
+					}	// .elanRowLeft
+
+					.elaqeRowRight{
+						p{
+							position:relative;
+							top: -10px;
+						}
+						select{
+							background:$color1;
+							vertical-align: middle;
+						    height: 32px;
+						    border: 1px solid #ccc;
+						    border-radius: 5px;
+						    padding: 0 10px;
+						    box-sizing: border-box;
+						    color: #333;
+						    font-size: 14px;
+						}
+						input{
+							background:$color1;
+							vertical-align: middle;
+						    height: 32px;
+						    border: 1px solid #ccc;
+						    border-radius: 5px;
+						    padding: 0 10px;
+						    box-sizing: border-box;
+						    color: #333;
+						    font-size: 14px;
+						}
+						textarea{
+								border-color: $color1;
+								border-radius:5px;
+								height: 95px;
+							    resize: vertical;
+								position: relative;
+								top: 1px;
+								vertical-align: middle;
+								font-size: 14px;
+								font-weight: normal;
+							}
+					} // .elaqeRowRight
+
+			} // .elaqeItem
+
+			.btnAdd{
+				top: 20px;
+				padding: 9px 12px !important;
+				font-size:16px !important;
+				@media  (max-width:767px){
+					margin: 0 auto;
+					left: 15px;
+				   }
+			}
+		} //elaqe
+
+
+		} //form
+} // #elan

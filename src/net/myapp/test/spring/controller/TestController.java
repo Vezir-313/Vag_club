@@ -146,7 +146,7 @@ public class TestController
   
   @GetMapping("/add_car")
   public String add_car() {
-    return "find";
+    return "add_car";
   }
   
   @GetMapping("/api/search")

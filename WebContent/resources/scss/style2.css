@@ -1,3 +1,282 @@
+#elan {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+  width: 100%;
+  background: #F6F7F8; }
+  #elan form h2 {
+    text-align: center; }
+  #elan form .elanContentItem .elanRow .elanRowLeft p {
+    line-height: 15px;
+    margin-bottom: 0;
+    margin-top: 18px;
+    font-weight: normal;
+    color: #333;
+    font-weight: normal;
+    vertical-align: middle;
+    font-size: 14px; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      #elan form .elanContentItem .elanRow .elanRowLeft p {
+        font-size: 12px; } }
+    #elan form .elanContentItem .elanRow .elanRowLeft p span {
+      color: #c51e2b; }
+  #elan form .elanContentItem .elanRow .elanRowRight select {
+    background: #ffb12c;
+    vertical-align: middle;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 14px; }
+  #elan form .elanContentItem .elanRow .elanRowRight input {
+    background: #ffb12c;
+    vertical-align: middle;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 14px; }
+  #elan form .elanContentItem .elanRow .elanRowRight textarea {
+    border-color: #ffb12c;
+    border-radius: 5px;
+    height: 95px;
+    resize: vertical;
+    position: relative;
+    top: 1px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: normal; }
+  #elan form .elanContentItem .elanRow .elanRowCheck {
+    top: 10px; }
+    #elan form .elanContentItem .elanRow .elanRowCheck label {
+      top: -8px;
+      position: relative; }
+      #elan form .elanContentItem .elanRow .elanRowCheck label:last-child {
+        top: -17px; }
+      #elan form .elanContentItem .elanRow .elanRowCheck label input {
+        vertical-align: middle;
+        border-radius: 50%;
+        width: 20px;
+        height: 14px; }
+      #elan form .elanContentItem .elanRow .elanRowCheck label span {
+        cursor: pointer;
+        position: relative;
+        top: 1px;
+        vertical-align: middle;
+        font-size: 14px;
+        font-weight: normal; }
+  #elan form .elanContentItem .elanRow .elanRowKredit {
+    padding-top: 20px; }
+    #elan form .elanContentItem .elanRow .elanRowKredit label input {
+      vertical-align: middle;
+      border-radius: 50%;
+      width: 30px;
+      height: 19px; }
+    #elan form .elanContentItem .elanRow .elanRowKredit label span {
+      cursor: pointer;
+      position: relative;
+      top: 3px;
+      vertical-align: middle;
+      font-size: 16px;
+      font-weight: normal; }
+  #elan form .tehcizat {
+    clear: both;
+    padding-top: 50px;
+    width: 100%; }
+    #elan form .tehcizat h1 {
+      font-size: 28px; }
+      @media (max-width: 767px) {
+        #elan form .tehcizat h1 {
+          text-align: center; } }
+    @media (max-width: 479px) {
+      #elan form .tehcizat .tehcizatItem {
+        width: 80% !important;
+        margin: 0 auto !important;
+        margin-left: 20px !important;
+        margin-top: 20px !important; } }
+    @media (min-width: 479px) and (max-width: 767px) {
+      #elan form .tehcizat .tehcizatItem {
+        padding-left: 30px !important;
+        margin-top: 40px !important; }
+        #elan form .tehcizat .tehcizatItem:nth-child(4) {
+          margin-top: -95px !important; } }
+    #elan form .tehcizat .tehcizatItem label {
+      margin-top: 5px; }
+      #elan form .tehcizat .tehcizatItem label span {
+        cursor: pointer;
+        margin-left: 10px; }
+  #elan form .shekil h1 {
+    margin-bottom: 15px;
+    font-size: 28px; }
+    @media (max-width: 767px) {
+      #elan form .shekil h1 {
+        margin-left: 15px; } }
+  #elan form .shekil .fotoContent .addFoto {
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 114px;
+    height: 86px;
+    background-color: #ffb12c;
+    text-align: center; }
+    @media (max-width: 767px) {
+      #elan form .shekil .fotoContent .addFoto {
+        margin-left: 15px; } }
+    #elan form .shekil .fotoContent .addFoto i {
+      font-size: 45px;
+      position: relative;
+      top: 23px; }
+  #elan form .shekil .fotoContent .addedFoto {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    clear: both;
+    width: 100%; }
+    #elan form .shekil .fotoContent .addedFoto .addedFotoItem {
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 111px;
+      height: 110px; }
+      #elan form .shekil .fotoContent .addedFoto .addedFotoItem .imgDiv {
+        overflow: hidden;
+        width: 111px;
+        height: 84px; }
+        #elan form .shekil .fotoContent .addedFoto .addedFotoItem .imgDiv img {
+          width: 100%;
+          height: 100%;
+          border: 1px solid lightgray;
+          box-sizing: border-box;
+          width: 111px;
+          height: 84; }
+      #elan form .shekil .fotoContent .addedFoto .addedFotoItem .fotoIcon i {
+        padding: 5px;
+        cursor: pointer; }
+        #elan form .shekil .fotoContent .addedFoto .addedFotoItem .fotoIcon i:hover {
+          background: yellow; }
+        #elan form .shekil .fotoContent .addedFoto .addedFotoItem .fotoIcon i:first-child {
+          color: red;
+          font-size: 18px; }
+        #elan form .shekil .fotoContent .addedFoto .addedFotoItem .fotoIcon i:nth-child(2) {
+          float: right; }
+        #elan form .shekil .fotoContent .addedFoto .addedFotoItem .fotoIcon i:nth-child(3) {
+          float: right; }
+  @media (min-width: 768px) {
+    #elan form .shekil .fotoContent .shekilTxt .shekilTxtItem:first-child {
+      margin-left: -15px; } }
+  #elan form .shekil .fotoContent .shekilTxt .shekilTxtItem ul {
+    padding: 0;
+    margin-top: 30px; }
+    #elan form .shekil .fotoContent .shekilTxt .shekilTxtItem ul li {
+      margin-top: 15px; }
+      #elan form .shekil .fotoContent .shekilTxt .shekilTxtItem ul li span {
+        color: #c51e2b; }
+  #elan form .video h1 {
+    margin-bottom: 15px;
+    font-size: 28px; }
+    @media (max-width: 767px) {
+      #elan form .video h1 {
+        margin-left: 15px; } }
+  #elan form .video .videoContent .addVideo {
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 114px;
+    height: 86px;
+    background-color: #ffb12c;
+    text-align: center; }
+    @media (max-width: 767px) {
+      #elan form .video .videoContent .addVideo {
+        margin-left: 15px; } }
+    #elan form .video .videoContent .addVideo i {
+      font-size: 45px;
+      position: relative;
+      top: 23px; }
+  #elan form .video .videoContent .addedVideo {
+    margin: 0 auto;
+    width: 360px;
+    clear: both; }
+    @media (max-width: 380px) {
+      #elan form .video .videoContent .addedVideo {
+        width: 90%; } }
+    #elan form .video .videoContent .addedVideo .addedVideoItem {
+      position: relative;
+      display: none;
+      margin-top: 30px; }
+      #elan form .video .videoContent .addedVideo .addedVideoItem i {
+        font-size: 18px;
+        color: red;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        position: absolute; }
+  #elan form .elaqe {
+    clear: both;
+    padding-top: 20px; }
+    #elan form .elaqe h1 {
+      margin-bottom: 15px;
+      font-size: 28px; }
+      @media (max-width: 767px) {
+        #elan form .elaqe h1 {
+          margin-left: 15px; } }
+    #elan form .elaqe .elaqeItem .elaqeRowLeft p {
+      line-height: 15px;
+      margin-bottom: 0;
+      margin-top: 18px;
+      font-weight: normal;
+      color: #333;
+      font-weight: normal;
+      vertical-align: middle;
+      font-size: 14px; }
+      @media (min-width: 768px) and (max-width: 991px) {
+        #elan form .elaqe .elaqeItem .elaqeRowLeft p {
+          font-size: 12px; } }
+      #elan form .elaqe .elaqeItem .elaqeRowLeft p span {
+        color: #c51e2b; }
+    #elan form .elaqe .elaqeItem .elaqeRowRight p {
+      position: relative;
+      top: -10px; }
+    #elan form .elaqe .elaqeItem .elaqeRowRight select {
+      background: #ffb12c;
+      vertical-align: middle;
+      height: 32px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      color: #333;
+      font-size: 14px; }
+    #elan form .elaqe .elaqeItem .elaqeRowRight input {
+      background: #ffb12c;
+      vertical-align: middle;
+      height: 32px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      color: #333;
+      font-size: 14px; }
+    #elan form .elaqe .elaqeItem .elaqeRowRight textarea {
+      border-color: #ffb12c;
+      border-radius: 5px;
+      height: 95px;
+      resize: vertical;
+      position: relative;
+      top: 1px;
+      vertical-align: middle;
+      font-size: 14px;
+      font-weight: normal; }
+    #elan form .elaqe .btnAdd {
+      top: 20px;
+      padding: 9px 12px !important;
+      font-size: 16px !important; }
+      @media (max-width: 767px) {
+        #elan form .elaqe .btnAdd {
+          margin: 0 auto;
+          left: 15px; } }
+
 #search {
   padding-top: 50px;
   width: 100%;
