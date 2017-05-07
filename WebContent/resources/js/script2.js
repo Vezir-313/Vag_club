@@ -115,9 +115,9 @@ $("#elan .tehcizat label").on("click",function(){
     for(var i =0 ; i<$("#elan .tehcizat label input").length;i++){
         if($($("#elan .tehcizat label input")[i]).prop("checked")){
             if(str == ""){
-                    str+=$($("#elan .tehcizat label span")[i]).text();  
+                    str+=$($("#elan .tehcizat label span")[i]).value();  
                 }else {
-                    str+=";"+$($("#elan .tehcizat label span")[i]).text();
+                    str+=";"+$($("#elan .tehcizat label span")[i]).value();
                 } 
         }
     }

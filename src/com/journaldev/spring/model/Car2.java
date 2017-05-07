@@ -14,9 +14,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.CreationTimestamp;
+
+import net.myapp.services.Utils;
 @Entity
 @javax.persistence.Table(name="cars")
-public class Car {
+public class Car2 {
 	 
 	@javax.persistence.Id
 	@Column(name="ID")
@@ -27,23 +29,23 @@ public class Car {
 	  String ban;
 	  String reng;
 	  int yurus;
-	  int buraxilis_ili;
-	  int muherrik_hecmi_sm;
-	  int muherrik_hecmi_ag;
+//	  int buraxilis_ili;
+//	  int muherrik_hecmi_sm;
+//	  int muherrik_hecmi_ag;
 	  String yanacaq;
 	  String oturucu;
 	  String suret_qutusu;
-	  int qiymet;
+	 // int qiymet;
 	  String valyuta;
-	  Boolean barter;
-	  Boolean kredit;
+	  String barter;
+	  String kredit;
 	  String link_photos;
 	  String link_video;
 	  String info;
 	  @CreationTimestamp
 	  @Temporal(TemporalType.TIMESTAMP)
 	  Date date;
-	  Boolean apply;
+	  String apply;
 	  
 	  @OneToMany(fetch = FetchType.LAZY, mappedBy = "car",cascade = {CascadeType.ALL})
 		Set<Connection> connectionSet;
@@ -51,7 +53,7 @@ public class Car {
 	  
 	  
 	  @OneToOne(cascade = CascadeType.ALL)
-	  @JoinColumn(name = "userID")
+	  @JoinColumn(name = "ID")
 	  User user;
 
 		  
@@ -92,13 +94,13 @@ public class Car {
 
 
 
-	public Boolean getApply() {
+	public String getApply() {
 		return apply;
 	}
 
 
 
-	public void setApply(Boolean apply) {
+	public void setApply(String apply) {
 		this.apply = apply;
 	}
 
@@ -187,10 +189,16 @@ public class Car {
 	public void setYurus(int yurus) {
 		this.yurus = yurus;
 	}
+	
+	
+	public void setYurus(String yurus) {
+		if(!Utils.isNullOrEmpty(yurus))
+		this.yurus = Integer.valueOf(yurus);
+		else this.yurus=0;
+	}
 
 
-
-	public int getBuraxilis_ili() {
+	/*public int getBuraxilis_ili() {
 		return buraxilis_ili;
 	}
 
@@ -199,10 +207,10 @@ public class Car {
 	public void setBuraxilis_ili(int buraxilis_ili) {
 		this.buraxilis_ili = buraxilis_ili;
 	}
+*/
 
 
-
-	public int getMuherrik_hecmi_sm_sm() {
+	/*public int getMuherrik_hecmi_sm_sm() {
 		return muherrik_hecmi_sm;
 	}
 
@@ -210,7 +218,7 @@ public class Car {
 
 	public void setMuherrik_hecmi_sm(int muherrik_hecmi_sm) {
 		this.muherrik_hecmi_sm = muherrik_hecmi_sm;
-	}
+	}*/
 
 
 
@@ -251,7 +259,7 @@ public class Car {
 
 
 
-	public int getQiymet() {
+	/*public int getQiymet() {
 		return qiymet;
 	}
 
@@ -259,7 +267,7 @@ public class Car {
 
 	public void setQiymet(int qiymet) {
 		this.qiymet = qiymet;
-	}
+	}*/
 
 
 
@@ -275,13 +283,13 @@ public class Car {
 
 
 
-	public Boolean getbarter() {
+	public String getbarter() {
 		return barter;
 	}
 
 
 
-	public void setbarter(Boolean barter) {
+	public void setbarter(String barter) {
 		this.barter = barter;
 	}
 
@@ -293,7 +301,7 @@ public class Car {
 
 
 
-	public int getMuherrik_hecmi_ag() {
+	/*public int getMuherrik_hecmi_ag() {
 		return muherrik_hecmi_ag;
 	}
 
@@ -302,28 +310,28 @@ public class Car {
 	public void setMuherrik_hecmi_ag(int muherrik_hecmi_ag) {
 		this.muherrik_hecmi_ag = muherrik_hecmi_ag;
 	}
+*/
 
 
-
-	public Boolean getBarter() {
+	public String getBarter() {
 		return barter;
 	}
 
 
 
-	public void setBarter(Boolean barter) {
+	public void setBarter(String barter) {
 		this.barter = barter;
 	}
 
 
 
-	public Boolean getKredit() {
+	public String getKredit() {
 		return kredit;
 	}
 
 
 
-	public void setKredit(Boolean kredit) {
+	public void setKredit(String kredit) {
 		this.kredit = kredit;
 	}
 
@@ -341,9 +349,6 @@ public class Car {
 
 
 
-	public int getMuherrik_hecmi_sm() {
-		return muherrik_hecmi_sm;
-	}
 
 	public String getLink_video() {
 		return link_video;

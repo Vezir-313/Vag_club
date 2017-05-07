@@ -133,8 +133,8 @@
 <!-- ========================================================================================================================================================================================================================================================================================================================================================================================= -->
 <section id = "elan">
 	<div class="container">
-		<form action="">
-			<div class="col-lg-12">	
+<form method="POST" action="${pageContext.request.contextPath}/add_car" enctype="multipart/form-data">		
+	<div class="col-lg-12">	
                 <h2>ELAN</h2>
                 <hr>
 	         </div>
@@ -145,7 +145,7 @@
 							<p><spring:message code='marka' text='default text' /> <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
+							<select name="marka" id="">
 <option value=""><spring:message code='sec' text='default text' /></option>
 <option value='ACGCars'><spring:message code='marka.ACGCars' text='default text' />
 <option value='ATV'><spring:message code='marka.ATV' text='default text' />
@@ -293,7 +293,7 @@
 							<p>Model  <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
+							<select name="model" id="">
 								<option value=""><spring:message code='sec' text='default text' /></option>
 								
 							</select>
@@ -305,7 +305,7 @@
 							<p><spring:message code='ban_novu' text='default text' /> <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
+							<select name="ban" id="">
 								<option value=""><spring:message code='sec' text='default text' /></option>
 								<option value='Avtobus'><spring:message code='ban.Avtobus' text='default text' />
 <option value='Dartqı'><spring:message code='ban.Dartqı' text='default text' />
@@ -334,7 +334,7 @@
 							<p><spring:message code='yurus' text='default text' />, km <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<input type="number">
+							<input type="number" name="yurus" id="yurus" >
 						</div>	
 					</div>
 
@@ -343,7 +343,7 @@
 							<p><spring:message code='reng' text='default text' /> <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
+							<select name="reng" id="">
 <option value=''><spring:message code='sec' text='default text' />
 							
 <option value='Ağ'><spring:message code='reng.Ağ' text='default text' />
@@ -373,15 +373,15 @@
 							<p><spring:message code='qiymet' text='default text' /><span>*</span></p>
 						</div>
 						<div class="col-md-5 col-sm-5 col-xs-8 elanRowRight">
-							<input type="number">
+							<input type="number" name="qiymet">
 						</div>
 						<div class="col-md-3 col-sm-3 col-xs-4 elanRowCheck">
 							<label for="">
-								<input type="checkbox" value="AZN">
+								<input type="checkbox" value="AZN" name="valyuta">
 								<span>AZN</span>
 							</label><br>
 							<label for="">
-								<input type="checkbox" value="USD">
+								<input type="checkbox" value="USD" name="valyuta">
 								<span>USD</span>
 							</label>		
 						</div>	
@@ -390,11 +390,11 @@
 					<div class="row elanRow">
 						<div class="col-md-8 col-md-offset-4 elanRowKredit">
 							<label for="">
-								<input type="checkbox">
+								<input type="checkbox" name="kredit" value="true">
 								<span><spring:message code='kredit' text='default text' /></span>
 							</label><br>
 							<label for="">
-								<input type="checkbox">
+								<input type="checkbox" name="barter" value="true">
 								<span><spring:message code='barter' text='default text' /></span>
 							</label>
 						</div>
@@ -411,7 +411,7 @@
 							<p><spring:message code='yanacaq_novu' text='default text' /><span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
+							<select name="yanacaq" id="">
 								<option value=""><spring:message code='sec' text='default text' /></option>
 								<option value='Benzin'><spring:message code='yanacaq.Benzin' text='default text' />
 <option value='Dizel'><spring:message code='yanacaq.Dizel' text='default text' />
@@ -428,7 +428,7 @@
 							<p><spring:message code='oturucu' text='default text' />  <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
+							<select name="oturucu" id="">
 								<option value=""><spring:message code='sec' text='default text' /></option>
 								<option value="Tam"><spring:message code='oturucu.Tam' text='default text' /></option>
 								<option value="Arxa"><spring:message code='oturucu.Arxa' text='default text' /></option>
@@ -443,7 +443,7 @@
 							<p><spring:message code='suretler_qutusu' text='default text' /><span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
+							<select name="suret_qutusu" id="">
 								<option value=""><spring:message code='sec' text='default text' /></option>
 								<option value="Mexaniki"><spring:message code='suretler_qutusu.Mexanika' text='default text' /></option>
 								<option value="Avtomat"><spring:message code='suretler_qutusuşAvtomat' text='default text' /></option>
@@ -456,8 +456,8 @@
 							<p><spring:message code='buraxilis_ili' text='default text' /> <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
-								<option value=""><spring:message code='sec' text='default text' /></option>
+							<select name="buraxilis_ili" id="">
+								<option value="0"><spring:message code='sec' text='default text' /></option>
 <option value='1950'>1950
 <option value='1951'>1951
 <option value='1952'>1952
@@ -535,8 +535,8 @@
 							<p><spring:message code='muherrik_hecmi' text='default text' />, sm<sup>3</sup> <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<select name="" id="">
-								<option value=""><spring:message code='sec' text='default text' /></option>
+							<select name="muherrik_hecmi_sm" id="muherrrik_hecmi_sm">
+								<option value="0"><spring:message code='sec' text='default text' /></option>
 								<option value="50">50</option>
 <option value="100">100</option>
 <option value="150">150</option>
@@ -629,7 +629,7 @@
 							<p><spring:message code='muherrik_hecmi' text='default text' />, a.g. <span>*</span></p>
 						</div>
 						<div class="col-md-8 col-sm-8 col-xs-12 elanRowRight">
-							<input type="number">
+							<input type="number" name="muherrik_hecmi_ag">
 						</div>	
 					</div>
 
@@ -641,7 +641,7 @@
 								<p><spring:message code='elave_melumat' text='default text' /></p>
 							</div>
 							<div class="col-md-10 col-sm-10 col-xs-12 elanRowRight">
-								<textarea name="" id="" cols="30" rows="10"></textarea>
+								<textarea name="info" id="" cols="30" rows="10"></textarea>
 								<p style="margin-top: -10px;"><spring:message code='telefon_nomrelerini_qeyd_etmek_qadagandir' text='default text' /></p>
 							</div>	
 						</div>
@@ -651,34 +651,34 @@
 						<h1><spring:message code='avtomobilin_techizati' text='default text' /></h1>	
 				<div class="row">
 					<div class="col-md-3 col-sm-3 col-xs-6 tehcizatItem">
-						<label for='one'><input type='checkbox' value='Yüngül lehimli disklər'/><span><spring:message code='tool.Yüngüllehimlidiskler' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Mərkəzi qapanma'/><span><spring:message code='tool.Mərkəziqapanma' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Kondisioner'/><span><spring:message code='tool.Kondisioner' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Yan pərdələr'/><span><spring:message code='tool.Yanpərdələr' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='1'/><span><spring:message code='tool.Yüngüllehimlidiskler' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='2'/><span><spring:message code='tool.Mərkəziqapanma' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='3'/><span><spring:message code='tool.Kondisioner' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='4'/><span><spring:message code='tool.Yanpərdələr' text='default text' /></span></label><br>
 	
 					</div>
 
 					<div class="col-md-3 col-sm-3 col-xs-6 tehcizatItem">
-						<label for='one'><input type='checkbox' value='Dəri salon'/><span><spring:message code='tool.Dərisalon' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Oturacaqların ventilyasiyası'/><span><spring:message code='tool.Oturacaqlarınventilyasiyası' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Arxa görüntü kamerası'/><span><spring:message code='tool.Arxagörüntükamerası' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='5'/><span><spring:message code='tool.Dərisalon' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='6'/><span><spring:message code='tool.Oturacaqlarınventilyasiyası' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='7'/><span><spring:message code='tool.Arxagörüntükamerası' text='default text' /></span></label><br>
 
 					</div>
 
 					<div class="col-md-3 col-sm-3 col-xs-6 tehcizatItem">
-					<label for='one'><input type='checkbox' value='ABS'/><span><spring:message code='tool.ABS' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Park radarı'/><span><spring:message code='tool.Parkradarı' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Yağış sensoru'/><span><spring:message code='tool.Yağışsensoru' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='8'/><span><spring:message code='tool.ABS' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='9'/><span><spring:message code='tool.Parkradarı' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='10'/><span><spring:message code='tool.Yağışsensoru' text='default text' /></span></label><br>
 	
 					</div>
 
 					<div class="col-md-3 col-sm-3 col-xs-6 tehcizatItem">
-						<label for='one'><input type='checkbox' value='Ksenon lampalar'/><span><spring:message code='tool.Ksenonlampalar' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Lyuk'/><span><spring:message code='tool.Lyuk' text='default text' /></span></label><br>
-<label for='one'><input type='checkbox' value='Oturacaqların isidilməsi'/><span><spring:message code='tool.Oturacaqlarınisidilməsi' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='11'/><span><spring:message code='tool.Ksenonlampalar' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='12'/><span><spring:message code='tool.Lyuk' text='default text' /></span></label><br>
+<label for='one'><input type='checkbox' value='13'/><span><spring:message code='tool.Oturacaqlarınisidilməsi' text='default text' /></span></label><br>
 
 					</div>
-					<input type="text" name="CheckedTehcizat">
+					<input type="text" name="all_tools">
 				</div>	
 				</div><!--  tehcizat -->
 
@@ -688,11 +688,11 @@
 						<div class="col-md-12 col-sm-12 col-xs-12 addFoto">
 							<i class="fa fa-camera" aria-hidden="true"></i>
 						</div>
-						<input type="file" accept="image/*" id="fileInput" name="fileInput" style="display: none;" >
+						<input type="file" accept="image/*" id="fileInput" name="sekiller" style="display: none;" >
 						<div class="addedFoto">
 							
 						</div>
-						<input type="text" name="ArtirilmiwFotolar" id="ArtirilmiwFotolar">
+						<input type="text" name="link_photos" id="ArtirilmiwFotolar">
 						<div class="col-md-12 col-sm-12 col-xs-12 shekilTxt">
 							<div class="shekilTxtItem col-md-6 col-sm-6 col-xs-12 ">
 								<ul>
@@ -724,7 +724,7 @@
 						<div class="col-md-12 col-sm-12 col-xs-12 addVideo">
 							<i class="fa fa-video-camera" aria-hidden="true"></i>
 						</div>
-						<input type="file" accept="image/*" id="fileInput" name="fileInput" style="display: none;" >
+						<input type="file" accept="image/*" id="fileInput" name="video" style="display: none;" >
 						<div class="addedVideo">
 							<div class="addedVideoItem">
 								<video width="100%" height="240" controls>
@@ -734,7 +734,7 @@
 								<i class="fa fa-times" aria-hidden="true"></i>
 							</div>
 						</div>
-						<input type="text" name="ArtirilmiwVideo" id="ArtirilmiwVideo" >
+						<input type="text" name="link_video" id="ArtirilmiwVideo" >
 					</div>  <!-- videoContent -->
 				</div>  <!-- video -->
 
@@ -746,7 +746,7 @@
 								<p><spring:message code='adiniz' text='default text' /> <span>*</span></p>
 							</div>
 							<div class="col-md-8 col-sm-8 col-xs-12 elaqeRowRight">
-								<input type="text" name="">
+								<input type="text" name="ad">
 							</div>	
 						</div>
 
@@ -755,7 +755,7 @@
 								<p><spring:message code='seher' text='default text' /><span>*</span></p>
 							</div>
 							<div class="col-md-8 col-sm-8 col-xs-12 elaqeRowRight">
-								<select name="" id="">
+								<select name="seher" id="">
 									<option value=""></option>
 									<option value='Abşeron'><spring:message code='seher.Abşeron' text='default text' />
 <option value='Kürdəmir'><spring:message code='seher.Kürdəmir' text='default text' />
@@ -827,7 +827,7 @@
 								<p>E-mail <span>*</span></p>
 							</div>
 							<div class="col-md-8 col-sm-8 col-xs-12 elaqeRowRight">
-								<input type="text" name="">
+								<input type="text" name="email">
 								<p><spring:message code='saytda_gosterilmir' text='default text' /></p>
 							</div>	
 						</div>
@@ -840,7 +840,7 @@
 								<p><spring:message code='telefon_nomresi' text='default text' /> <span>*</span></p>
 							</div>
 							<div class="col-md-8 col-sm-8 col-xs-12 elaqeRowRight">
-								<input type="text" name="" placeholder="<spring:message code='meselen' text='default text' /> 070-777-88-99" class="addPhone" maxlength="13">
+								<input type="text" name="telefon_nomresi" placeholder="<spring:message code='meselen' text='default text' /> 070-777-88-99" class="addPhone" maxlength="13">
 							</div>	
 						</div>
 
@@ -864,9 +864,17 @@
 
 					</div>  <!-- elaqeItem -->
 
-					<button type="button" class="btn btn-warning btnAdd"><spring:message code='gondermek' text='default text' /></button>
+					<button type="submit" class="btn btn-warning btnAdd" onclick="myFunction()"><spring:message code='gondermek' text='default text' /></button>
 
 				</div> <!-- elaqe -->
+
+				
+<script>
+function myFunction() {
+	var x=document.getElementById("yurus").value;
+	alert("x="+x);
+}
+</script>
 
 				
 

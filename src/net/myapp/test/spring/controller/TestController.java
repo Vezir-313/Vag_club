@@ -4,6 +4,7 @@ import com.journaldev.spring.dao.AnnouncementDAO;
 import com.journaldev.spring.dao.Blog_statusDAO;
 import com.journaldev.spring.dao.FormDAO;
 import com.journaldev.spring.model.Car;
+import com.journaldev.spring.model.Car2;
 import com.journaldev.spring.model.Marka;
 import com.journaldev.spring.model.User;
 
@@ -100,52 +101,33 @@ public class TestController
   }
   
   @PostMapping("/add_car")
-  public String add_car(User user,Car car,@RequestParam("files") MultipartFile[] files,
-          RedirectAttributes redirectAttributes,String all_tools,String text) {
+  public String add_car_post(Car car,User user,@RequestParam("sekiller") MultipartFile[] sekiller,@RequestParam("video") MultipartFile[] video,
+          RedirectAttributes redirectAttributes,String all_tools,@RequestParam(defaultValue = "0")int yurus,@RequestParam(defaultValue = "0")int muherrik_hecmi_ag) {
 	  
-	  String  UPLOADED_FOLDER="/Users/miriyusifli/Desktop/images";
-	 System.out.println("text is "+text);
-	  car.setApply(true);
-	  car.setBan("asdasd");
-	  car.setBuraxilis_ili(1231);
-	  car.setLink_photos("asdsad");
-	  car.setMarka("123");
-	  car.setModel("1231");
-	  car.setMuherrik_hecmi(1231);
-	  car.setOturucu("123");
-	  car.setQiymet(213);
-	  car.setReng("asd");
-	  car.setSeher("1231");
-	  car.setSatis("1231");
-	  car.setSuret_qutusu("123123");
-	  car.setValyuta("asdsa");
-	  car.setYanacaq("1231");
-	  car.setYurus(1231);
-	  
-	  
-	  System.out.println("");
-	  
-	  user.setAd("asd");
-	  user.setEmail("1231");
-	  user.setSeher("123213");
-	  user.setTelefon_nomresi("123123");
-	  
-	  all_tools="1;2;3;";
-	  
-	  announcementDAO.InsertAnnouncement(car, user, Utils.getStringAsArray(all_tools),UPLOADED_FOLDER,files);
+	  String  UPLOADED_FOLDER_image="/Users/miriyusifli/Desktop/images";
+	  String UPLOADED_FOLDER_video="/Users/miriyusifli/Desktop/images";
+	  System.out.println("geldi");
+	  System.out.println(user.getTelefon_nomresi());
+	  System.out.println(yurus);
+	/*  System.out.println(RequestHelper.getParam(""));
+	  System.out.println(RequestHelper.getParam(""));
+	  System.out.println(RequestHelper.getParam(""));*/
+
+	  announcementDAO.InsertAnnouncement(car, user, Utils.getStringAsArray(all_tools),UPLOADED_FOLDER_image,UPLOADED_FOLDER_video,sekiller,video);
 
 	  
   
 	  
+	 
 	  
 	  
 	  
-	  
-    return "find";
+    return "add_car";
   }
   
   @GetMapping("/add_car")
   public String add_car() {
+	  System.out.println("Get metodu isledi");
     return "add_car";
   }
   

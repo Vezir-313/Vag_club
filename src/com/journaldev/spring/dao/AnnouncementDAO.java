@@ -17,6 +17,7 @@ import com.journaldev.spring.model.User;
 import net.myapp.form.model.FormFindCar;
 import net.myapp.services.ImageUtil;
 import net.myapp.services.Utils;
+import net.myapp.services.VideoUtil;
 import net.myapp.services.dao.DataUtilParameter;
 
 
@@ -34,20 +35,25 @@ public class AnnouncementDAO {
 	  
 	  
 	  @Transactional
-	  public void InsertAnnouncement(Car car,User user,String[] tools,String UPLOADED_FOLDER,MultipartFile[] files)
+	  public void InsertAnnouncement(Car car,User user,String[] tools,String UPLOADED_FOLDER_image,String UPLOADED_FOLDER_video,MultipartFile[] sekiller,MultipartFile[] video)
 	  {
 	  ImageUtil imageUtil=new ImageUtil();
+	  VideoUtil videoUtil=new VideoUtil();
 	  Session session = sessionFactory.getCurrentSession();
 
 			
-
+	  System.out.println("user is "+user);
 	    Tool tool=new Tool();
-		   
-
+		   System.out.println("girdi1");
+	    session.save(user);
+	    System.out.println("girdi2");
+	    car.setUser(user);
+	    System.out.println("girdi3");
+	   // user.setCar(car);
 	    session.save(car);
-
+	    System.out.println("girdi4");
 	   
-		
+		if(!Utils.isEmpty(tools)){
 		for (int i = 0; i < tools.length; i++) {
 		     Connection Connection=new Connection();
 
@@ -59,8 +65,11 @@ public class AnnouncementDAO {
 			    
 				
 		}
-		
-//	imageUtil.upload_MultipleImages(UPLOADED_FOLDER, files);
+		}
+	imageUtil.upload_MultipleImages(UPLOADED_FOLDER_image, sekiller);
+	videoUtil.upload_Video(UPLOADED_FOLDER_video, video);
+	
+	System.out.println("Bitdi");
 		
 	  }
 	  
@@ -73,7 +82,7 @@ public class AnnouncementDAO {
 	    List<Car> list = query.list();
 	    
 	  
-	    System.out.println(list.get(0).getConnectionSet());
+	//    System.out.println(list.get(0).getConnectionSet());
 	    return list;
 	  }
 	  
